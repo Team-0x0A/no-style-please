@@ -46,7 +46,7 @@ li { margin: 0.4rem 0; }
 *:target { background: yellow; }
 
 .w {
-  max-width: 720px;
+  max-width: 640px;
   margin: 0 auto;
   padding: 4rem 2rem;
 }
@@ -73,6 +73,7 @@ code {
 }
 
 div.highlighter-rouge code {
+  font-size: 12px;
   display: block;
   overflow-x: auto;
   white-space: pre-wrap;
