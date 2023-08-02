@@ -1,7 +1,7 @@
 {%-if include.category-%}
-  {%-assign posts = site.categories[include.category]-%}  
+  {%-assign posts = site.categories[include.category] | where_exp: "post", "post.hidden != true"-%}  
 {%-else-%}
-  {%-assign posts = site.posts-%}
+  {%-assign posts = site.posts | where_exp: "post", "post.hidden != true"-%}
 {%-endif-%}
 
 {%-if include.limit and posts.size > include.limit-%}
